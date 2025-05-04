@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= title %></title>
+  </head>
+
+  <body>
+    <%- include('header') %>
+
+    <h1><%= title %></h1>
+    <% if (age) { %>
+    <p><%= message %></p>
+    <% } else { %>
+    <span>There is no message</span>
+    <% }%>
+
+    <ul>
+      <% items.forEach(item=>{%>
+      <li><%= item _%></li>
+      <% })%>
+    </ul>
+
+    <table border="1" width="500px">
+      <% user.forEach(users=>{%>
+      <tr>
+        <td><%= users.name%></td>
+        <td><%= users.age%></td>
+      </tr>
+      <% })%>
+    </table>
+
+    <img src="output.png" alt="" width="500px" />
+  </body>
+</html>
